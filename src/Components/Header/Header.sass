@@ -1,6 +1,10 @@
+
+$button-color: rgb(255, 212, 20);
+$hover-button-color: #FFFF8F;
+$primaryColor: grey;
 .header
   width: 100%
-  background-color: #fff
+  background-color: $primaryColor
   padding: 1rem 0
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05)
   position: relative
@@ -39,12 +43,13 @@
     li
       .nav-btn
         text-decoration: none
-        color: #333
+        color: #000
         font-weight: 500
+        font-size: 1.2rem // <-- increased font size
         transition: color 0.2s ease
 
         &:hover
-          color: #007bff
+          color: $button-color
 
 .nav-right
   display: flex
@@ -53,15 +58,15 @@
 
 .login-btn
   padding: 0.5rem 1.2rem
-  background-color: #007bff
-  color: #fff
+  background-color: $button-color
+  color: $primaryColor
   border: none
-  border-radius: 4px
+  border-radius: 9px
   cursor: pointer
   transition: background-color 0.2s ease
 
   &:hover
-    background-color: #0056b3
+    background-color: $hover-button-color
 
 // Responsive Menu Toggle (if needed in the future)
 .show_menu
@@ -70,6 +75,6 @@
 @media (max-width: 768px)
   .navigation .menu
     flex-direction: column
-    background-color: #fff
+    background-color: $primaryColor
     position: absolute
     top: 100%

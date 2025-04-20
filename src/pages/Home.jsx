@@ -1,16 +1,12 @@
 import React from 'react';
 import { FaPlus } from 'react-icons/fa'; 
 import '../style/Button.sass'
+import Dashboard from './Dashboard';
 
 const Home = () => {
   return (
     <div>
-<div className="btn-container">
-  <button>
-    <span className="text"><FaPlus/></span>
-   
-  </button>
-</div>
+<Dashboard/>
     </div>
   );
 }
