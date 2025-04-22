@@ -52,7 +52,7 @@ const Dashboard = () => {
 
         <li key={x.id}>
             <span>{x.name}</span>
-            <span className={x.amount<0?"negative":"positive"}>
+            <span className={ x.amount < 0 ? "negative":"positive" } >
 
             ₹{x.amount}
 
