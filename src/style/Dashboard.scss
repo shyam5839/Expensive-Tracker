@@ -1,6 +1,24 @@
+:root, [data-theme = 'light'] {
+    --bg-balance: #cfb7ed;
+    --bg-income: #94ffd0;
+    --bg-expense: #f5a3a3;
+
+    --text-color: #476bb9;
+    --hover-bg: #668edf;
+    --border-color: #789cd1;
+}
+[data-theme = 'dark'] {
+    --bg-balance: #280058;
+    --bg-income: #280058;
+    --bg-expense: #280058;
+    --text-color: #fff;
+    --hover-bg: #374151;
+    --border-color: #374151;
+}
+
 .dashboard {
     padding: 2rem;
-    
+    color: var(--text-color);
 
     h1 {
         font-size: 1.75rem;
@@ -16,7 +34,7 @@
         .card {
             padding: 1rem;
             border-radius: 1rem;
-            color: #2a2a2a;
+            color: var(--text-color);
             display: flex;
             justify-content: space-between;
             align-items: center;
@@ -32,19 +50,19 @@
             }
 
             &.balance {
-                background: linear-gradient(135deg, rgb(255, 212, 20), #FFFF8F);
+                background: var(--bg-balance);
             }
             &.income {
-                background: linear-gradient(135deg, #1dff4a, #027141);
+                background: var(--bg-income);
             }
             &.expenses {
-                background: linear-gradient(135deg, #ff000d, #8b0303);
+                background: var(--bg-expense);
             }
         }
     }
 
     .transactions {
-        background: #fff;
+        background: var(--border-color);
         border-radius: 1rem;
         padding: 1.5rem;
         box-shadow: 0 2px 10px rgba(0,0,0,0.5);

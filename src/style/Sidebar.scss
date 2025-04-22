@@ -2,19 +2,19 @@
     --bg-color: #f8fafc;
     --text-color: #111827;
     --hover-bg: #e5e7eb;
-    --border-color: #d1d5db;
+    --border-color: #f3f6e0;
 }
 [data-theme = 'dark'] {
     --bg-color: #1f2937;
     --text-color: #fff;
     --hover-bg: #374151;
-    --border-color: #374151;
+    --border-color: #280058;
 }
 
 .sidebar {
-    width: 100px;
-    height: 88vh;
-    background-color: var(--bg-color);
+    width: 130px;
+    height: 90vh;
+    background-color: var(--border-color);
     color: var(--text-color);
     display: flex;
     flex-direction: column;

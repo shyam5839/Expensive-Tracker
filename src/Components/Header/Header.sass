@@ -1,9 +1,23 @@
-$button-color: rgb(255, 212, 20);
-$hover-button-color: #FFFF8F;
-$primaryColor: grey;
+
+:root, [data-theme='light']
+  --bg-coloring: rgb(255, 255, 255)
+  --text-color: #476bb9
+  --hover-bg: #668edf
+  --border-color: #789cd1
+
+[data-theme='dark']
+  --bg-coloring: #374151
+  --text-color: #fff
+  --hover-bg: #374151
+  --border-color: #374151
+
+$button-color: rgb(255, 212, 20)
+$hover-button-color: #FFFF8F
+$primaryColor: #f8fafc
+
 .header
   width: 100%
-  background-color: $primaryColor
+  background-color: var(--bg-coloring)
   padding: 1rem 0
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05)
   position: relative
@@ -42,7 +56,7 @@ $primaryColor: grey;
     li
       .nav-btn
         text-decoration: none
-        color: #000
+        color: var(--text-color)
         font-weight: 500
         font-size: 1.2rem // <-- increased font size
         transition: color 0.2s ease

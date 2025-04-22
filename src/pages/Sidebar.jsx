@@ -3,7 +3,7 @@ import React, {useState,useEffect} from 'react'
 // import Settings from '../pages/Settings';
 // import Form from './Form/Form';
 import '../style/Sidebar.scss'
-import { Home,User,Settings,BadgeIndianRupee,LogOut,Sun,Moon} from "lucide-react"
+import { Home,User,Settings,BadgeIndianRupee,ClipboardList,LogOut,Sun,Moon} from "lucide-react"
 import App from './../App';
 const Sidebar = () => {
 
@@ -21,6 +21,7 @@ const navItems = [
     {name : 'Profile', icon: <User/>, path: '/profile'},
     {name : 'Settings', icon: <Settings />, path: '/settings'},
     {name : 'Add Expense', icon: <BadgeIndianRupee />,path: '/form/create'},
+    {name : 'Expense list', icon: <ClipboardList />,path: '/expenselist'},
 ]
   return (
     <div className='sidebar'>

@@ -2,9 +2,9 @@ import { NavLink, Link } from 'react-router-dom';
 import './Header.sass';
 import { useEffect, useRef } from 'react';
 
+
 const navLinks = [
-  { path: '/home', display: 'Home' },
-  { path: '/form/create', display: 'Add Expense' },
+
 ];
 
 const Header = () => {
@@ -26,12 +26,15 @@ const Header = () => {
   const toggleMenu = () => menuRef.current.classList.toggle('show_menu');
   return (
     <header className='header' ref={headerRef}>
+      
       <div className='container'>
-
+    
 
         {/* Middle: Navigation Menu */}
         <nav className='navigation' ref={menuRef} onClick={toggleMenu}>
           <ul className='menu'>
+              {/* <img src="../../../public/vite.svg" alt="Site Logo" /> */}
+              <img src="/vite.svg" alt="Site Logo" style={{ display: 'block', marginLeft: -118 }} />
             {navLinks.map((link, index) => (
               <li key={index}>
                 <NavLink to={link.path} className="nav-btn">

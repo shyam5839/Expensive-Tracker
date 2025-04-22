@@ -1,6 +1,7 @@
 import React from 'react'
 import '../style/Dashboard.scss'
 import { FaArrowDown, FaArrowUp } from 'react-icons/fa'
+import Chart from './Chart';
 
 const mockData = {
     balance: 4520.75,
@@ -43,7 +44,7 @@ const Dashboard = () => {
             </div>
 
 
-
+<Chart/>
 
             <div className='transactions'>
 <h3>Recent Transactions</h3>
