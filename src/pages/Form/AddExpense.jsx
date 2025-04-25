@@ -11,6 +11,7 @@ const AddExpense = () => {
     amount: '',
     date: '',
     description: '',
+    receipt: null,
   }
 
   const validationSchema =Yup.object(
@@ -89,6 +90,25 @@ const AddExpense = () => {
             <Field name="description" placeholder="description" type="text" as="textarea" />
             <div className="error">
               <ErrorMessage name="description" component="div" className="error" />
+            </div>
+          </div>
+
+          <div className="form-group">
+            <label htmlFor="receipt">Upload Receipt</label>
+            <Field name="receipt">
+              {({ form }) => (
+                <input
+                  id="receipt"
+                  name="receipt"
+                  type="file"
+                  onChange={(event) => {
+                    form.setFieldValue("receipt", event.currentTarget.files[0]);
+                  }}
+                />
+              )}
+            </Field>
+            <div className="error">
+              <ErrorMessage name="receipt" component="div" className="error" />
             </div>
           </div>
 
