@@ -1,0 +1,98 @@
+:root, [data-theme = 'light'] {
+    --bg-balance: #cfb7ed;
+    --bg-income: #94ffd0;
+    --bg-expense: #f5a3a3;
+
+    --text-color: #476bb9;
+    --hover-bg: #668edf;
+    --border-color: #789cd1;
+}
+[data-theme = 'dark'] {
+    --bg-balance: #280058;
+    --bg-income: #280058;
+    --bg-expense: #280058;
+    --text-color: #fff;
+    --hover-bg: #374151;
+    --border-color: #374151;
+}
+
+.dashboard {
+    padding: 2rem;
+    color: var(--text-color);
+
+    h1 {
+        font-size: 1.75rem;
+        font-weight: 600;
+        margin-bottom: 1.5rem;
+    }
+    .summary-cards {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+        gap: 1rem;
+        margin-bottom: 2rem;
+
+        .card {
+            padding: 1rem;
+            border-radius: 1rem;
+            color: var(--text-color);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 4px 14px rgba(0,0,0,0.1);
+
+            p {
+                font-size: 0.85rem;
+                opacity: 0.85;
+            }
+            h2 {
+                font-size: 1.4rem;
+                font-weight: 700;
+            }
+
+            &.balance {
+                background: var(--bg-balance);
+            }
+            &.income {
+                background: var(--bg-income);
+            }
+            &.expenses {
+                background: var(--bg-expense);
+            }
+        }
+    }
+
+    .transactions {
+        background: var(--border-color);
+        border-radius: 1rem;
+        padding: 1.5rem;
+        box-shadow: 0 2px 10px rgba(0,0,0,0.5);
+
+        h3 {
+            font-size: 1.1rem;
+            margin-bottom: 1rem;
+        }
+
+        ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+
+            li {
+                display: flex;
+                justify-content: space-between;
+                padding: 0.75rem, 0;
+                border-bottom: 1px solid #eee;
+
+                &:last-child {
+                    border-bottom: none;
+                }
+                .negative {
+                    color: #ff000d;
+                }
+                .positive {
+                    color: #1dff4a;
+                }
+            }
+        }
+    }
+}

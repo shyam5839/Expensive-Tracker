@@ -1,0 +1,51 @@
+.footer
+  width: 100%
+  background-color: grey
+  padding: 2rem 0
+  box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.05)
+  position: relative
+  z-index: 10
+  margin-top: auto
+
+.footer-container
+  max-width: 1200px
+  margin: 0 auto
+  padding: 0 1rem
+  display: flex
+  justify-content: space-between
+  align-items: center
+  flex-wrap: wrap
+
+.footer-text
+  font-size: 1rem
+  color: #000
+
+.footer-links
+  display: flex
+  gap: 1.5rem
+  list-style: none
+  margin: 0
+  padding: 0
+
+  li
+    a
+      text-decoration: none
+      color: rgb(255, 212, 20)
+      font-weight: 500
+      transition: color 0.2s ease
+
+      &:hover
+        color: #FFFF8F
+
+@media (max-width: 768px)
+  .footer-container
+    flex-direction: column
+    text-align: center
+    gap: 1rem
+
+  .footer-text
+    margin-bottom: 1rem
+
+  .footer-links
+    flex-direction: column
+    gap: 0.5rem
